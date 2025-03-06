@@ -1,0 +1,26 @@
+///week03_4 stroke strokeweight fill ???
+void setup(){
+  size(500,500);
+}
+void draw(){
+  stroke(0);
+  fill(255,0,0);
+  rect(0,0,50,50);
+  fill(255,255,0);
+  rect(0,50,50,50);
+  fill(0,255,0);
+  rect(0,100,50,50);
+  fill(0,0,255);
+  rect(0,150,50,50);
+  stroke(myStroke);
+  if(mousePressed)line(mouseX,mouseY,pmouseX,pmouseY);
+}
+color myStroke;
+void mousePressed(){
+  if(mouseX<50){
+    if(mouseY<50) myStroke=color(255,0,0);
+  else if(mouseY<100) myStroke=color(255,255,0);
+  else if(mouseY<150) myStroke=color(0,255,0);
+  else if(mouseY<200) myStroke=color(0,0,255);
+  }////week0304mousePressed stroke  line
+}
